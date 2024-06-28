@@ -1,0 +1,32 @@
+
+
+/* 3.4 Video
+/*----------------------------------------------*/
+.video-section.jarallax{
+  min-height: 825px;
+}
+/* overide */
+.modal-dialog {
+  max-width: 800px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.modal-content {
+  padding: 0;
+  background-color: #f5f3ef;
+  border: none;
+  border-radius: 0
+}
+.text-pattern {
+  animation: rotation 50s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

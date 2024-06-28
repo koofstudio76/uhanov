@@ -1,0 +1,125 @@
+
+
+
+@font-face {
+   font-family: "KudryashevDisplay";
+   src: url(../fonts/KudryashevDisplay.ttf);
+   font-weight: bold;
+   font-style: normal;
+ }
+ @font-face {
+   font-family: "  kudry_weird-headline";
+   src: url(../fonts/kudry_weird-headline.otf);
+   font-weight: bold;
+   font-style: normal;
+ }
+
+ .layout{position: absolute;top: 0;
+            width:100%;
+           left: 85%; 
+            top: -25vw;
+          height: 100%;}
+
+
+
+
+
+
+
+.nav1 ul li a{z-index: 999999999999;
+           color: #fff;
+           font-size: 4vw;
+
+       }
+
+       .nav1{position:absolute ;
+        text-decoration: none;
+        z-index: 99999;
+        width: 100vw;
+        height: 100%;
+        top: 250px;
+        right: -120vw;
+        
+        }
+        .nav1 ul li{list-style: none;}
+        .nav1 ul li a{z-index: 999999999999;
+                   color: #fff;line-height: 3vw;
+                   font-size: clamp(35px, 5vw, 58px);
+                   list-style: none;
+                   text-decoration: none;
+        
+               }
+#d_left{
+
+          height: 100vh;
+          width: 70%;
+          position:fixed;
+          top: 0;
+          left:-120%;
+          clip-path: url(#clip);
+        
+          z-index:1999999999999999999999999999999999;
+        }
+        #clip{position: fixed;left: 0%;top:0%;}
+        
+        #d_right{
+        
+          height: 100vh;
+          width: 105vw;
+          position: fixed;
+          clip-path: url(#clip2);
+
+          top:0vh;
+          left:  80%;
+         z-index:99;
+        }
+        .bgnavblue{       
+          background: rgba(42, 114, 207, 0.836);}
+    
+          .bgnavred{       
+            background: rgba(236, 33, 33, 0.836);}
+            .bgnavyellow{       
+              background: rgba(207, 191, 42, 0.836);}
+              .bgnavblue{       
+                background: rgba(42, 114, 207, 0.836);}
+                .bgnavblue{       
+                  background: rgba(42, 114, 207, 0.836);}
+                        
+
+
+          #clip2{position:fixed;
+          right: -0%;
+          top: -0%;
+          width: 50%;
+          height: 100%;
+        }
+        h1 {
+          font-weight: 300;
+          font-size: clamp(2rem, 5vw, 4rem);
+          width: 50%;
+          margin: 0;
+        }
+        
+        .menu {
+          position: fixed;
+          right: 5%;
+          z-index: 95510;
+          padding: 25% clamp(2rem, 8vw, 7rem) 0;
+        }
+        .menu:before {
+          position: absolute;
+          content: "";
+          width: 5vw;
+          height: 5vw;
+          stroke: 1px white;
+          border-radius: 50%;
+          background: rgb(255, 255, 255);
+          z-index: -1;
+          transform: scale(0);
+          transition: transform 0.5s ease;
+        }
+        .menu:hover:before {
+          transform: scale(1);
+        }
+            
+        .doorses{position: absolute;}
