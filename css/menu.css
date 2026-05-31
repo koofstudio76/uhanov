@@ -122,4 +122,337 @@
           transform: scale(1);
         }
             
-        .doorses{position: absolute;}
+        .doorses{position: absolute;} /* ----------------------------------------------
+   Fonts
+---------------------------------------------- */
+
+@font-face {
+  font-family: "KudryashevDisplay";
+  src: url("../fonts/KudryashevDisplay.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KudryWeirdHeadline";
+  src: url("../fonts/kudry_weird-headline.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ----------------------------------------------
+   Layout / Decorative Layer
+---------------------------------------------- */
+
+.layout {
+  position: absolute;
+  top: -25vw;
+  left: 85%;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ----------------------------------------------
+   Navigation
+---------------------------------------------- */
+
+.nav1 {
+  position: absolute;
+  top: 250px;
+  right: -120vw;
+
+  width: 100vw;
+  height: 100%;
+
+  z-index: 99999;
+  text-decoration: none;
+}
+
+.nav1 ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nav1 ul li {
+  list-style: none;
+}
+
+.nav1 ul li a {
+  position: relative;
+  z-index: 999999;
+
+  color: #fff;
+  font-size: clamp(35px, 5vw, 58px);
+  line-height: 1.05;
+
+  text-decoration: none;
+  list-style: none;
+}
+
+
+/* ----------------------------------------------
+   Door Panels
+---------------------------------------------- */
+
+#d_left {
+  position: fixed;
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100vh;
+
+  clip-path: url("#clip");
+  z-index: 999999;
+}
+
+#d_right {
+  position: fixed;
+  top: 0;
+  left: 80%;
+
+  width: 105vw;
+  height: 100vh;
+
+  clip-path: url("#clip2");
+  z-index: 99999;
+}
+
+#clip {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#clip2 {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 50%;
+  height: 100%;
+}
+
+
+/* ----------------------------------------------
+   Navigation Background Colors
+---------------------------------------------- */
+
+.bgnavblue {
+  background: rgba(42, 114, 207, 0.836);
+}
+
+.bgnavred {
+  background: rgba(236, 33, 33, 0.836);
+}
+
+.bgnavyellow {
+  background: rgba(207, 191, 42, 0.836);
+}
+
+
+/* ----------------------------------------------
+   Titles
+---------------------------------------------- */
+
+h1 {
+  width: 50%;
+  margin: 0;
+
+  font-weight: 300;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+
+/* ----------------------------------------------
+   Menu Button
+---------------------------------------------- */
+
+.menu {
+  position: fixed;
+  right: 5%;
+
+  z-index: 95510;
+  padding: 25% clamp(2rem, 8vw, 7rem) 0;
+}
+
+.menu::before {
+  content: "";
+
+  position: absolute;
+
+  width: 5vw;
+  height: 5vw;
+
+  border-radius: 50%;
+  background: #fff;
+
+  z-index: -1;
+
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.menu:hover::before {
+  transform: scale(1);
+}
+
+
+/* ----------------------------------------------
+   Doors Wrapper
+---------------------------------------------- */
+
+.doorses {
+  position: absolute;
+}
+
+
+/* ----------------------------------------------
+   Tablet
+---------------------------------------------- */
+
+@media (max-width: 991px) {
+  .layout {
+    top: -18vw;
+    left: 70%;
+  }
+
+  .nav1 {
+    top: 180px;
+    right: -110vw;
+  }
+
+  .nav1 ul li a {
+    font-size: clamp(32px, 7vw, 52px);
+    line-height: 1.1;
+  }
+
+  #d_left {
+    width: 80%;
+  }
+
+  #d_right {
+    left: 70%;
+    width: 115vw;
+  }
+
+  h1 {
+    width: 70%;
+  }
+
+  .menu {
+    right: 4%;
+    padding-top: 18%;
+  }
+
+  .menu::before {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+
+/* ----------------------------------------------
+   Mobile
+---------------------------------------------- */
+
+@media (max-width: 767px) {
+  .layout {
+    top: -10vw;
+    left: 45%;
+    width: 120%;
+  }
+
+  .nav1 {
+    top: 130px;
+    right: -105vw;
+
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .nav1 ul {
+    padding-left: 24px;
+  }
+
+  .nav1 ul li a {
+    font-size: clamp(30px, 11vw, 46px);
+    line-height: 1.15;
+  }
+
+  #d_left {
+    width: 100vw;
+    left: -120%;
+    height: 100dvh;
+  }
+
+  #d_right {
+    left: 65%;
+    width: 120vw;
+    height: 100dvh;
+  }
+
+  #clip2 {
+    width: 70%;
+  }
+
+  h1 {
+    width: 90%;
+    font-size: clamp(2rem, 12vw, 3.4rem);
+  }
+
+  .menu {
+    top: 24px;
+    right: 24px;
+
+    padding: 0;
+  }
+
+  .menu::before {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+
+/* ----------------------------------------------
+   Small Mobile
+---------------------------------------------- */
+
+@media (max-width: 480px) {
+  .layout {
+    top: -5vw;
+    left: 35%;
+  }
+
+  .nav1 {
+    top: 110px;
+  }
+
+  .nav1 ul {
+    padding-left: 18px;
+  }
+
+  .nav1 ul li a {
+    font-size: clamp(28px, 12vw, 40px);
+  }
+
+  #d_right {
+    left: 58%;
+    width: 130vw;
+  }
+
+  .menu {
+    top: 18px;
+    right: 18px;
+  }
+
+  .menu::before {
+    width: 48px;
+    height: 48px;
+  }
+}
