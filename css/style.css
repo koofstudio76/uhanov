@@ -30,3 +30,109 @@
     transform: rotate(359deg);
   }
 }
+/* ----------------------------------------------
+   3.4 Video Section
+---------------------------------------------- */
+
+.video-section.jarallax {
+  min-height: 825px;
+}
+
+/* ----------------------------------------------
+   Modal Video
+---------------------------------------------- */
+
+.modal-dialog {
+  max-width: 800px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  padding: 0;
+  background-color: #f5f3ef;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* если внутри модалки iframe / video */
+.modal-content iframe,
+.modal-content video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
+
+/* ----------------------------------------------
+   Rotating Text Pattern
+---------------------------------------------- */
+
+.text-pattern {
+  animation: textPatternRotation 50s infinite linear;
+  will-change: transform;
+}
+
+@keyframes textPatternRotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ----------------------------------------------
+   Mobile
+---------------------------------------------- */
+
+@media (max-width: 991px) {
+  .video-section.jarallax {
+    min-height: 680px;
+  }
+
+  .modal-dialog {
+    max-width: 92vw;
+    width: 92vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-section.jarallax {
+    min-height: 560px;
+  }
+
+  .modal-dialog {
+    max-width: 94vw;
+    width: 94vw;
+    min-height: 100dvh;
+    padding: 20px 0;
+  }
+
+  .modal-content {
+    width: 100%;
+  }
+
+  .text-pattern {
+    animation-duration: 70s;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-section.jarallax {
+    min-height: 460px;
+  }
+
+  .modal-dialog {
+    max-width: 96vw;
+    width: 96vw;
+  }
+}
